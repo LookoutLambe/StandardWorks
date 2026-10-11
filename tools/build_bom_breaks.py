@@ -273,6 +273,7 @@ def connective(g):
 SENSELESS = STOP | set('''will has does had have did do not that which who he she it they them his her
 their i me my we us our you your him for but yea also with from by on upon into as so all there
 this these those are were been am'''.split())
+MODALS = set('would should could may might must can cannot'.split())   # no word of sense at a clause's head
 def binds_back(h):
     return any(r.match(h or '') for r in BINDS_HEB)
 
@@ -514,6 +515,22 @@ def breaks_for(tokens, entext, finish=True):
                     # it, 1 Nephi 22:29)
                     before = set(norm(x) for x, _ in ew[:j + 1])
                     after = set(norm(x) for x, _ in ew[j + 1:])
+                    #   ACROSS A COMMA ONLY THE HEAD OF THE NEXT CLAUSE PROVES IT. The
+                    #   English puts its pronoun subject first and the Hebrew its
+                    #   predicate: "my beloved brethren, I perceive" is אַחַי הָאֲהוּבִים
+                    #   רֹאֶה אֲנִי and "deny me, it would have been better" is תְּכַחֲשׁוּ
+                    #   בִי טוֹב הָיָה (2 Nephi 32:8, 31:14), and the unplaced predicate
+                    #   sat at the far end of the window with the comma after it. A
+                    #   token whose sense is the first word of sense after the comma
+                    #   belongs after it; the whole clause beyond was tried and found
+                    #   דָּבָר's "thing" ten words on (3:7), and the first two found the
+                    #   "lifted up" of הַגְּבָעוֹת הַנִּשָּׂאוֹת in "the nations which are
+                    #   lifted up" after it (2 Nephi 12:14).
+                    nxt = []
+                    for x, c2 in ew[j + 1:]:
+                        nxt.append(norm(x))
+                        if c2: break
+                    head = [x for x in nxt if x not in SENSELESS and x not in MODALS and len(x) >= 3][:1]
                     t = hi
                     while t > lo and anchor[t] < 0:
                         g = speak[t][1]
@@ -525,7 +542,8 @@ def breaks_for(tokens, entext, finish=True):
                         # descendant of Joseph;" back off its copula הוּא, 1 Nephi
                         # 5:14, and was withdrawn)
                         if not (re.match(r'and\b', g.strip().lower()) or connective(g)
-                                or (cls == 2 and sense and all(x in after and x not in before for x in sense))):
+                                or (cls == 2 and sense and all(x in after and x not in before for x in sense))
+                                or (cls == 1 and sense and all(x in head and x not in before for x in sense))):
                             break
                         t -= 1
                     q = t

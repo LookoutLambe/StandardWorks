@@ -40,10 +40,10 @@ parentheses) are never accented.
 """
 import difflib, glob, json, os, re, sys, unicodedata as ud
 
-WLC = os.path.expanduser('~/Desktop/morphhb/wlc')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'ot_teamim')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from teamim_grammar import WLC  # noqa: E402
 from build_phrase_breaks import BOOKS, array_bodies, english_names  # noqa: E402
 
 N = lambda s: ud.normalize('NFC', s)

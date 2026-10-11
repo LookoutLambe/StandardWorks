@@ -40,6 +40,18 @@ follows the word. The same encoding as ot_teamim/, read by teamim.js.
 import json, os, re, unicodedata as ud
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+
+def wlc_dir():
+    """The OpenScriptures morphhb checkout (the Westminster Leningrad Codex as
+    wlc/*.xml). It lives on the Desktop outside every repo and has been moved
+    once; every te'amim tool asks here instead of hard-coding the folder."""
+    for d in ('~/Desktop/morphhb/wlc', '~/Desktop/Local BOM Masters/books/morphhb/wlc'):
+        d = os.path.expanduser(d)
+        if os.path.isdir(d):
+            return d
+    return os.path.expanduser('~/Desktop/morphhb/wlc')
+
+WLC = wlc_dir()
 N = lambda s: ud.normalize('NFC', s)
 IS_CONS = lambda c: u'א' <= c <= u'ת'
 VOWEL = {0x5b4, 0x5b5, 0x5b6, 0x5b7, 0x5b8, 0x5b9, 0x5ba, 0x5bb, 0x5c7}

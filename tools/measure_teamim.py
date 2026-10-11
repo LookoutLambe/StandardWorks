@@ -37,7 +37,8 @@ phrases for seven words, which is right for chant and too fine to read along.
 """
 import glob, os, re, sys, unicodedata as ud
 
-WLC = os.path.expanduser('~/Desktop/morphhb/wlc')
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from teamim_grammar import WLC  # noqa: E402
 RANK = {0x0591: 1, 0x0592: 2, 0x0593: 2, 0x0594: 2, 0x0595: 2, 0x0597: 2,
         0x0596: 3, 0x0598: 3, 0x0599: 3, 0x059A: 3, 0x059B: 3,
         0x059C: 4, 0x059D: 4, 0x059E: 4, 0x059F: 4, 0x05A0: 4, 0x05A1: 4,

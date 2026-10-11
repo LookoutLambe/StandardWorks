@@ -35,9 +35,9 @@ import collections, glob, json, math, os, re, sys, unicodedata as ud
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-WLC = os.path.expanduser('~/Desktop/morphhb/wlc')
 sys.path.insert(0, HERE)
 import teamim_grammar as G
+WLC = G.WLC
 from build_bom_breaks import feats as _reader_feats, array_bodies
 
 # THE FEATURES OF THE BINDING MODEL: the reader's own (the gloss words at the

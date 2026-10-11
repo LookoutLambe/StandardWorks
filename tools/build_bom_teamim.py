@@ -58,7 +58,7 @@ sys.path.insert(0, HERE)
 import teamim_grammar as G
 from learn_teamim import prose_verses, RANK
 from learn_teamim import pair_feats
-from build_bom_breaks import (BOOKS, corpus, english, silent, breaks_for,
+from build_bom_breaks import (BOOKS, corpus, english, silent, breaks_for, norm,
                               NEVER_AFTER, BINDS, binds_back, nfc, CONNECTIVES, SENSELESS)
 from build_volume_breaks import drop_split_pairs, drop_unnatural
 from build_ot_teamim import wlc_stream, encode_verse as encode_verbatim
@@ -242,7 +242,9 @@ def pair_link(toks, i):
     if u'־' in h2 or not PLAIN_WAW.match(nfc(h2)) or not nominal(h2, g2): return False
     # "I, Nephi, | and I bear record" (14:27): a pronoun after the "and" opens a
     # clause of its own; the pair's second member is a name or a kin word
-    if bare(nfc(h2)[2:]) in PRON: return False
+    # (...unless a pronoun stands before the "and": "you and I", אַתֶּם וַאֲנִי, is one
+    # subject, אֲנִ֣י וָאָ֑תָּה Genesis 31:44; a revia split it, 2 Nephi 33:11)
+    if bare(nfc(h2)[2:]) in PRON and bare(h) not in PRON: return False
     if nominal(h, g): return True
     # a third-person pronoun opens a pair only before a name or a kin word
     # (ה֖וּא וַאֲבוֹתָ֥יו, 5:16); before anything else bare הוּא ends its clause
@@ -261,7 +263,10 @@ SPEECH_COLON = r'\b(saying|said|say|saith|spake|speak|answered|cried)\b'
 STOP_WORDS = set("""and or nor but for yea even also so then thus that which who whom the a an of to in on at by
                     with from unto into he she it they them him his her their its is are was were be been""".split())
 _words = lambda s: re.findall(r"[a-z']+", (s or '').lower())
-_stem = lambda w: w[:5]          # "chastened" is "chasten", "spindles" "spindle"
+# ("chastened" is "chasten", "spindles" "spindle"; and the printed "ye", "thou", "thee"
+# are the glosses' "you", as the aligner reads them: "judge ye" ends with the gloss of
+# אַתֶּם, and read as "ye" it found "show unto you" two segments on, 2 Nephi 33:11)
+_stem = lambda w: norm(w)[:5]
 
 def transposed(toks, i, ent):
     """The comma after "a bow," closes "did make out of wood a bow", and the
@@ -471,7 +476,9 @@ PROCLITIC = set(NEVER_AFTER) | EXTRA_NEVER | set(u'עַל מִן עַד אֵת �
 DEMONSTRATIVE = set(u'ההוא ההיא הזה הזאת האלה ההם ההן ההמה'.split())
 # pointed, and matched pointed: the consonants of וְהִנֵּה "and behold" are those
 # of וָהֵנָּה "and thither" (הֵנָּה וָהֵנָּה, 17:26)
-CLAUSE_OPENERS = set(N(w) for w in u'כִּי כַּאֲשֶׁר וְכַאֲשֶׁר לְמַעַן וּלְמַעַן לְבִלְתִּי וְגַם בַּעֲבוּר וּבַעֲבוּר עַד וְהִנֵּה וַיְהִי לָכֵן וְלָכֵן עַל־כֵּן וְעַל־כֵּן'.split())
+CLAUSE_OPENERS = set(N(w) for w in u'כִּי כַּאֲשֶׁר וְכַאֲשֶׁר לְמַעַן וּלְמַעַן לְבִלְתִּי וְגַם בַּעֲבוּר וּבַעֲבוּר עַד וְהִנֵּה וַיְהִי לָכֵן וְלָכֵן עַל־כֵּן וְעַל־כֵּן הוֹי הִנֵּה'.split())
+# (הוֹי: a disjunctive before it 11 of 12 in the WLC, "to fulfil all righteousness, ‖ O then"
+# 2 Nephi 31:5; bare הִנֵּה 292 of 315)
 KI_MAQQEF = N(u'כִּי־')     # (NFC, as the corpus is read: the marks of a letter in canonical order)
 
 def stem3(h):
@@ -665,11 +672,21 @@ def make_weakest(toks, prior, w, ent=None):
             # a bare כֹּל reaches forward to its noun (כֹּל הָאָרֶץ), not when the
             # next word opens with a waw: there it is absolute and ends its
             # phrase (מֵעַל כֹּל ׀ וּבָרוּךְ אַתָּה, 11:6 "above all. And blessed")
-            if not (bare(h) in (u'כל',) and i + 1 < len(toks) and nfc(toks[i + 1][0]).startswith(u'ו')): return True
+            nxt = toks[i + 1][0] if i + 1 < len(toks) else u''
+            if bare(h) == u'כל' and nfc(nxt).startswith(u'ו'): pass
+            # ...and לֹא before כִּי is the answer "Nay", not a verb's negation (לֹּ֔א כִּ֥י
+            # בָרְח֖וֹב נָלִֽין Genesis 19:2; WLC a disjunctive on 16 of 21): "I say unto
+            # you, Nay; for ye have not come" is לָכֶם לֹא כִּי־לֹא בָּאתֶם, 2 Nephi 31:19
+            elif bare(h) == u'לא' and bare(nxt).split(u'\u05be')[0] == u'כי': pass
+            else: return True
         # a gloss that ends in "of", "the", "that", "which"... reaches forward,
         # except the demonstrative after its noun (\u05d4\u05b7\u05e9\u05b8\u05bc\u05c1\u05e0\u05b8\u05d4 \u05d4\u05b7\u05d4\u05b4\u05d9\u05d0 "that year",
         # \u05d4\u05b7\u05d3\u05b0\u05bc\u05d1\u05b8\u05e8\u05b4\u05d9\u05dd \u05d4\u05b8\u05d0\u05b5\u05dc\u05b6\u05bc\u05d4 "these things"), which closes the phrase
-        if BINDS.search(g.rstrip(u' ,;:.\u2014').strip()) and bare(h) not in DEMONSTRATIVE: return True
+        # (...and not הַכֹּל, which the article makes absolute, the "all" that ends its
+        # phrase: וְהִנֵּ֥ה הַכֹּ֛ל הֶ֖בֶל, Ecclesiastes 1:14; WLC a disjunctive after it 34 of 53.
+        # "I would ask if all is
+        # done? Behold" lost its stop on הַכֹּל, 2 Nephi 31:19)
+        if BINDS.search(g.rstrip(u' ,;:.\u2014').strip()) and bare(h) not in DEMONSTRATIVE and bare(h) != u'הכל': return True
         if CONSTRUCT_PL.search(nfc(h).replace(u'\u05be', u'')): return True
         if i + 1 < len(toks):
             h2, g2 = toks[i + 1]
@@ -712,9 +729,47 @@ def make_weakest(toks, prior, w, ent=None):
             # the WLC divides before one 12% of the time against 61% for any word)
             if u'־' not in h2 and bare(h2) in DEMONSTRATIVE: return True
         return False
+    FINITE = re.compile(r'^HV.[pivj]')                        # a bare finite verb: no waw, no particle in front
+    # a noun, a prepositional phrase, an adjective (not a cardinal: the table this
+    # volume reads tags עוֹד "still" HAcmsa where the WLC has HD, and כִּי־ע֤וֹד תֶּהְגּוּ֙
+    # took a pashta inside its clause, 2 Nephi 32:8)
+    NOMINAL_HEAD = re.compile(r'^H(Td/|R/|Rd/)?(Nc|Np|Aa)')
+    # the negative particle the table tags as a noun (בִּלְתִּי H1115, Ncbsc): it reaches
+    # forward to its verb (לְבִלְתִּ֨י יֵדְע֤וּ הַיְּהוּדִים֙, 1 Nephi 4:36; the WLC divides
+    # after one 40 times in 99, against 84% for a noun)
+    PARTICLE_NOUN = set(u'בלתי לבלתי מבלתי'.split())
+    def clause_head(i):
+        """THE LINK BEFORE A WORD THAT OPENS A CLAUSE, by the Tanakh's habit and
+           not the model's log-odds, which run at a quarter of the rate for these:
+           a clause opener (CLAUSE_OPENERS, כִּי at the head of its group), or a bare
+           finite verb after a noun, a prepositional phrase or an adjective (WLC: a
+           disjunctive before one 5,165 of 6,165, 84%; 87% when a verb already stands
+           in the clause). The verb of a new clause set down without a waw:
+           בְּכֹחַ רוּחַ־הַקֹּדֶשׁ ‖ יִשָּׂא כֹחַ רוּחַ־הַקֹּדֶשׁ had its zaqef on אִישׁ (2 Nephi
+           33:1), אַחֲרֵי קַבֶּלְכֶם אֶת־רוּחַ־הַקֹּדֶשׁ ‖ תּוּכְלוּ on קַבֶּלְכֶם, the verb cut
+           from its object (32:2); and an opener, יָדַעְתִּי בָּזֹאת ‖ כִּי, on יָדַעְתִּי (31:16).
+           A form the table cannot read is no head: בַּמָּשִׁיחַ ‖ תַּאֲמִינוּ (33:10) waits
+           on morph_of, which peels בַּ and not the article's dagesh behind it."""
+        if i + 1 >= len(toks): return False
+        h, h2 = toks[i][0], toks[i + 1][0]
+        p2 = nfc(h2)
+        if p2 in CLAUSE_OPENERS or (p2.startswith(KI_MAQQEF) and u'\u05be' not in p2[len(KI_MAQQEF):]): return 'open'
+        # (a group that opens with a particle is the head of its own clause already:
+        # כִּי־עוֹד, אִם־בִּדְבַר, לֹא־...)
+        if u'\u05be' in h and re.match(r'^H(T[crni]|C)', morph_of(h, last=False)): return False
+        if bare(h).split(u'\u05be')[-1] in PARTICLE_NOUN: return False
+        # ...and a demonstrative closing its phrase (בַּיּוֹם הַהוּא ‖ יֵדְעוּ: WLC a disjunctive
+        # after one before a finite verb 97 of 98; "And at that day shall the remnant
+        # of our seed know", 1 Nephi 15:14). By the word: the table tags them HTd/Tm
+        # and HTd/Pp3ms where the WLC has Pd
+        head = NOMINAL_HEAD.match(morph_of(h)) or (u'\u05be' not in h and bare(h) in DEMONSTRATIVE)
+        return 'verb' if (head and FINITE.match(morph_of(h2, last=False))) else False
     def weight(i, hi, glabel, near):
         s = score(i)
         if hard(i): s += HARD
+        # a clause head weighs what the Tanakh says of it, whatever the model's
+        # figure (the house rules below and the near window still count against it)
+        elif clause_head(i): s = max(s, STRONG)
         if i + 1 < len(toks):
             h, h2 = toks[i][0], toks[i + 1][0]
             # A PAIR STAYS A PAIR: "great and marvelous", "saw and heard" are not
@@ -834,11 +889,23 @@ def make_weakest(toks, prior, w, ent=None):
         # The bare word, or כִּי at the head of its group (כִּי־אִם, כִּי־הוּא): עַד־הַקֵּץ
         # "unto the end" is a preposition's phrase, not a clause (13:37).
         # (Before the pair guard below: וְגַם and וְהִנֵּה open with the plain waw.)
-        p2 = nfc(h2)
-        if (p2 in CLAUSE_OPENERS or (p2.startswith(KI_MAQQEF) and u'־' not in p2[len(KI_MAQQEF):])) and not hard(i): return True
+        kind = clause_head(i)
+        if kind == 'open' and not hard(i): return True
         if PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)): return False
         return weight(i, None, None, None) >= STRONG
-    return weakest, joiner, hard, strong, printed, score, appos, list_comma
+    strong.kind = clause_head          # (read by main: which sure links may halve a verse)
+    def rated(i):
+        """the model's log-odds with the clause head's floor: what settles two stops
+           tied for the middle ("to fulfil all righteousness, ‖ O then" against
+           "by water, to fulfil", 2 Nephi 31:5, where הוֹי opens the clause)"""
+        s = score(i)
+        # (the openers only: a noun before its verb is divided 84% of the time but
+        # halves the verse less often than any other division, 9.7% against 13.4%,
+        # and "all things ‖ have been done" took the etnachta off "have been done
+        # ‖ in the wisdom of him", 2 Nephi 2:24)
+        if not hard(i) and clause_head(i) == 'open': s = max(s, STRONG)
+        return s
+    return weakest, joiner, hard, strong, printed, rated, appos, list_comma
 
 
 MAX_CHAIN = 3            # dividers of one rank in one domain: the WLC's zaqef chains run to three (four in 0.2%)
@@ -984,13 +1051,23 @@ def printed_marks(key, toks, speak, ent, hand):
     # after עוֹד, גַּם, אַף is the author's clause end, "I speak unto you again;"
     # is אֲדַבֵּר אֲלֵיכֶם עוֹד and the stop belongs on עוֹד, 2 Nephi 6:3)
     stops = [(i, c) for i, c in br if c >= 2]
+    # (...nor the comma after a connective the Masoretes divide after as a rule:
+    # the breath table never pauses after לָכֵן, and the WLC divides after it 157
+    # times in 185, after וְעַתָּה 211 in 256, עַתָּה 96 in 131, אָכֵן 10 in 14; after
+    # הִנֵּה, אַךְ, אַף, גַּם the veto stands, at 28%, 29%, 18%, 9%. "wherefore, when
+    # they saw" lost the comma after לָכֵן, 1 Nephi 18:20)
+    own = [(i, c) for i, c in br if c < 2 and 0 <= i < len(speak) and bare(speak[i][0]) in DIVIDED_AFTER]
     br, _ = drop_split_pairs([(i, c) for i, c in br if c < 2], speak)
     br, _ = drop_unnatural(br, speak)
-    return sorted(set(br) | set(stops))
+    return sorted(set(br) | set(stops) | set(own))
+
+DIVIDED_AFTER = set(u'לכן ועתה עתה אכן'.split())
 
 
 # ------------------------------------------------------------ main
 def main():
+    if not os.path.isdir(G.WLC):
+        sys.exit('WLC not found at %s: the verbatim copies and the binding model both need it' % G.WLC)
     check = '--check' in sys.argv
     show = set(sys.argv[sys.argv.index('--show') + 1].split(',')) if '--show' in sys.argv else set()
     STRESS = load_js_table(os.path.join(ROOT, 'bom', 'stress.js'), 'SW_STRESS')
@@ -1025,8 +1102,14 @@ def main():
                      if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i)
                                                  or folded_mark(speak, i)))))
             printed.update(i for i, c in marks)
-            pb = punctuation_bounds(n, marks, ent, strong, score, appos,
-                                    lambda: G.first_cut(words, STRESS.get, weakest, [i for i in range(n) if appos(i)]),
+            # a noun before its verb with no printed mark there divides but does not
+            # halve the verse, as an apposition's comma does not: the WLC divides
+            # there 84% of the time and puts its etnachta there less often than on
+            # any other division (9.7% against 13.4%); "all things ‖ have been done
+            # in the wisdom of him" was the sure link's etnachta, 2 Nephi 2:24
+            minor = lambda i: appos(i) or (strong.kind(i) == 'verb' and i not in printed)
+            pb = punctuation_bounds(n, marks, ent, strong, score, minor,
+                                    lambda: G.first_cut(words, STRESS.get, weakest, [i for i in range(n) if minor(i)]),
                                     list_comma)
             if par:
                 bounds, how = list(par[1]), 'mt'
