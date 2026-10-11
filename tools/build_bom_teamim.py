@@ -548,14 +548,28 @@ def verb_first(toks, i, ent):
 # qatan the vowel of the unstressed word the maqqef makes (proclitic() decides: "and flocks
 # of every kind, that" is וְצֹאן מִכׇּל לְמַעַן, 3 Nephi 4:4): וְאֶת־כׇּ֥ל צֹאנָ֖ם, 3 Nephi 3:22
 PREJOIN = True
-ALWAYS_JOINED = set(N(w) for w in u'אֶל מִן אֶת וְאֶת וּמִן'.split())
+JOIN_AL = True
+# (פֶּן "lest" too: joined 92 times in 100, וּפֶן 4 in 4; פֶּ֧ן תִּשָּׂאֲךָ֛ kept an accent of its
+# own, Alma 26:10)
+ALWAYS_JOINED = set(N(w) for w in u'אֶל מִן אֶת וְאֶת וּמִן פֶּן וּפֶן'.split())
+# ...and before a bare word וְאֶל (270 of 275), עַל (2,734 of 2,946) and עִם (355 of 389); before a
+# maqqef group they stand free as often as not (עַל 140 of 232). "and also fathers for their
+# sons, and the daughter for the brother" is אָבוֹת עַל בְּנֵיהֶם וּבַת עַל אָחִיהָ, and with עַל
+# bare the pashta its zaqef needed fell on וּבַת, Alma 28:5
+JOINED_BEFORE_BARE = set(N(w) for w in (u'וְאֶל עַל עִם'.split() if JOIN_AL else u'וְאֶל'.split()))
 def prejoin(speak):
     if not PREJOIN: return ()
     out = []
     for i in range(len(speak) - 1):
         h, h2 = nfc(speak[i][0]), speak[i + 1][0]
-        if u'\u05be' in h: continue
-        if h in ALWAYS_JOINED or (h == N(u'וְאֶל') and u'\u05be' not in h2): out.append(i)
+        # (...and a group that ends in the construct כׇּל: "all their people" is אֶת־כׇּל עַמָּם,
+        # and the כׇּ֣ל took an accent of its own, Alma 27:14)
+        if u'\u05be' in h:
+            last = h.split(u'\u05be')[-1]
+            if KOL_PREFIX_CSTR and last and u'\u05c7' in last and bare(last) == u'כל' \
+               and proclitic([(last, speak[i][1]), speak[i + 1]], 0): out.append(i)
+            continue
+        if h in ALWAYS_JOINED or (h in JOINED_BEFORE_BARE and u'\u05be' not in h2): out.append(i)
         elif KOL_PREFIX_CSTR and u'\u05c7' in h and re.sub(u'^ו', '', bare(h)) in (u'בכל', u'לכל', u'ככל', u'מכל', u'כל') \
                 and proclitic(speak, i): out.append(i)
     return out
@@ -576,7 +590,7 @@ def proclitic(toks, i):
         if re.match(r'^H((C|R|Rd|Td|X)/)*(N|A|V\w?[rs])', mx) or bare(nx).startswith(u'אשר') \
            or (not mx and nfc(nx) not in CLAUSE_OPENERS and not VERB_GLOSS.search(gx)): return True
     if nfc(toks[i][0]) in WAW_PROC_BARE and i + 1 < len(toks) and u'\u05be' not in toks[i + 1][0]: return True
-    if nfc(toks[i][0]) not in PROCLITIC: return False
+    if kol_holam(toks[i][0], toks[i + 1][0] if i + 1 < len(toks) else None) or nfc(toks[i][0]) not in PROCLITIC: return False
     if EVER_NOUN and bare(toks[i][0]) == u'עד' and i >= 1 and re.search(u'עולם|עולמי', bare(toks[i - 1][0])): return False
     return True
 
@@ -859,6 +873,17 @@ PROCLITIC = set(NEVER_AFTER) | EXTRA_NEVER | set(u'עַל מִן עַד אֵת �
 WAW_PROCLITIC = True
 WAW_PROC_BARE = set(N(w) for w in u'וְעַל וְעַד וְאֶל'.split()) if WAW_PROCLITIC else set()
 if WAW_PROCLITIC: PROCLITIC |= set(N(w) for w in u'וְאֶת וּמִן וְעִם'.split())
+# THE ABSOLUTE כֹּל, WITH ITS HOLAM, STANDS FREE: the WLC never writes it with a maqqef (0 of
+# 793; joined it is כׇּל־) and divides after it before a noun 265 times in 280 (כֹּ֖ל מִשְׁפְּחֹ֥ת
+# הָאֲדָמָֽה, Genesis 12:3), a verb 52 in 56. Before אֲשֶׁר, divided 64 times in 139, it still
+# reaches forward (כְּכֹ֥ל אֲשֶׁר־צִוָּ֖ם, 3 Nephi 26:20, took a zaqef of its own when freed).
+# Held as a particle, "in his strength I can do all things; yea, behold" became כֹּל־אַף,
+# Alma 26:12
+KOL_HOLAM = True
+def kol_holam(h, h2=None):
+    h = nfc(h)
+    return KOL_HOLAM and u'\u05be' not in h and u'\u05c7' not in h and u'\u05b9' in h \
+        and bool(re.match(u'^ו?[בלמכ]?כל$', bare(h))) and not (h2 and bare(h2).startswith(u'אשר'))
 DEMONSTRATIVE = set(u'ההוא ההיא הזה הזאת האלה ההם ההן ההמה'.split())
 # (by its pointing, not its letters alone: הֲהוּא "is he?" and הֲזֶה "is this?" are the question's
 # הֲ, and "And the king said: Is God that Great Spirit" lost its colon to the demonstrative
@@ -1030,6 +1055,14 @@ def real_prefix(h):
     rest = h[2:]
     return attested(rest) is not None or attested(rest.replace(u'ּ', u'', 1)) is not None
 
+def chief_judge(h, h2):
+    """the volume's title "the chief judge": הַשֹּׁפֵט הָרֹאשׁ, and without its articles
+       too, שֹׁפֵט רֹאשׁ ("that there should be no more a chief judge" took the tifcha between
+       them, Alma 51:4; four in six were divided)"""
+    a, b = bare(h), bare(h2)
+    if re.search(u'השו?פט$', a) and b == u'הראש': return True
+    return CHIEF_BARE and bool(re.match(u'^ו?[לכב]?שו?פט$', a)) and b == u'ראש'
+
 def construct(h, h2, g2=None):
     """an attested construct form (HNcmsc, HAamsc: עֶבֶד, אוֹצַר, גְּדָל) before
        the bare noun, name or adjective it governs: the WLC puts a disjunctive
@@ -1148,7 +1181,17 @@ def make_weakest(toks, prior, w, ent=None):
         # (a form the table cannot read is taken for the verb it usually is: אִם־לֹא תָשׁוּבוּ,
         # Jacob 3:4)
         m2 = morph_of(n2, last=False)
-        return bare(n2).startswith(u'לא') or bool(m2 and not re.match(r'^H(C/)?V', m2))
+        return bare(n2).startswith(u'לא') or bool(m2 and not re.match(r'^H(C/)?V', m2)) or imlo_en(i)
+    def imlo_en(i):
+        """"if not" before a verb that is the ellipsis all the same, by the English: "inquire of
+           the Lord... otherwise we will perish in the land" is וְאִם־לֹא נֹאבַד בָּאָרֶץ (Alma 27:10;
+           וְאִם־לֹ֖א אֵדָֽעָה Genesis 18:21). Not "except", the condition itself (Jacob 1:19)"""
+        # (only before the verb: אִם־לֹא כֵן "if not so" is the ellipsis with its כֵן, Jacob 1:19)
+        if i + 1 >= len(toks): return False
+        m2 = morph_of(toks[i + 1][0], last=False)
+        if bare(toks[i + 1][0]).startswith(u'לא') or (m2 and not re.match(r'^H(C/)?V', m2)): return False
+        return bool(IMLO_EN and ent and re.search(r'\b(otherwise|or else)\b', ent, re.I)
+                    and not re.match(r'except\b', toks[i][1].strip().lower()))
     def noun_adj(i):
         """the word at i is an article adjective (or participle) after its noun, and
            a demonstrative follows it: noun, adjective, "this" (הַדָּבָר הַגָּדוֹל הַזֶּה).
@@ -1171,9 +1214,14 @@ def make_weakest(toks, prior, w, ent=None):
             if not m1: return False
             num = lambda n: 'p' if n == 'd' else n
             return not (m2 and (num(m1.group(4)) != num(m2.group(3)) or set([m1.group(3), m2.group(2)]) == set('mf')))
-        # (an unread noun by its gloss, and no genitive after it: "of life")
+        # (an unread noun by its gloss, and no genitive after it: "of life"; definite by its
+        # "the", or a noun under its own preposition, the adjective's article its mark: "in that
+        # awful state of blindness" is בְּעִוְרוֹן הַנּוֹרָא הַזֶּה, glossed "in blindness", and the
+        # pashta fell on the noun, 1 Nephi 13:32)
+        gp = toks[i - 1][1].strip().lower()
         return not re.match(r'of\b', toks[i][1].strip().lower()) and \
-            bool(re.match(r'^(and |in |to |with |from |unto |upon )?the\b', toks[i - 1][1].strip().lower()))
+            bool(re.match(r'^(and |in |to |with |from |unto |upon )?the\b', gp)
+                 or (ADJ_DEM_PREP and re.match(r'^(and )?(in|to|with|from|unto|upon|by|for|into|on)\s+\w+$', gp)))
     def hard(i):
         h, g = toks[i]
         if nfc(h) in EXTRA_NEVER: return True
@@ -1191,7 +1239,7 @@ def make_weakest(toks, prior, w, ent=None):
         # non-verb 17 times in 28, וְאִם־לֹ֖א אֵדָֽעָה Genesis 18:21, before a verb 5 in 63)
         if IMLO and is_imlo(i): pass
         elif u'\u05be' in nfc(h) and nfc(h).split(u'\u05be')[-1] in (NEVER_AFTER | EXTRA_NEVER) - set([u'כׇּל', u'כֹּל', u'כׇל', u'כֹל']): return True
-        if nfc(h) in NEVER_AFTER:
+        if nfc(h) in NEVER_AFTER and not kol_holam(h, toks[i + 1][0] if i + 1 < len(toks) else None):
             # a bare כֹּל reaches forward to its noun (כֹּל הָאָרֶץ), not when the
             # next word opens with a waw: there it is absolute and ends its
             # phrase (מֵעַל כֹּל ׀ וּבָרוּךְ אַתָּה, 11:6 "above all. And blessed")
@@ -1226,6 +1274,12 @@ def make_weakest(toks, prior, w, ent=None):
         # (...nor לַכֹּל, בַּכֹּל, כַּכֹּל: the article under the prefix makes them as absolute
         # as הַכֹּל; WLC a disjunctive after them 10 times in 11, לַכֹּ֖ל זְמָ֑ן Ecclesiastes 3:1.
         # "liberal to all, both old and young" lost its comma on לַכֹּל, Alma 1:30)
+        # (...nor a preposition with its own pronoun, whose English preposition is stranded
+        # by the relative clause: "in the place of which has been spoken" glosses בּוֹ "of", and
+        # the semicolon after it was held hard, Alma 27:16)
+        # (...nor the "about" of a phrasal verb: "to bring about the work" glosses לְהָבִיא
+        # "to bring about", and the tevir its tifcha needed fell between "the work" and
+        # "great", Alma 26:3. Not "was about to", nor the preposition, "about my loins")
         # (...nor מִכֹּל with its holam, the absolute "than all": WLC a disjunctive after it 76
         # times in 96, וּמִכֹּל 9 in 9. "my best beloved brethren" is אַחַי הָאֲהוּבִים מִכֹּל, and the
         # comma went back inside the phrase to הָאֲהוּבִים, Alma 24:12. Not מִכׇּל, the construct)
@@ -1237,8 +1291,11 @@ def make_weakest(toks, prior, w, ent=None):
         # held hard, and the tifcha fell inside "the land | of Middoni", Alma 21:12)
         # (...and "all" on a word that is no form of כֹּל, a pronoun or an adverb: "But this is
         # not all;" is אַךְ לֹא־זֹאת לְבַד, and its "all" held the semicolon hard, Alma 17:3)
-        if BINDS.search(g.rstrip(u' ,;:.\u2014').strip()) and not is_dem(h) and bare(h) != u'הכל' \
+        if BINDS.search(g.rstrip(u' ,;:.\u2014').strip()) and not is_dem(h) and bare(h) != u'הכל' and not kol_holam(h, toks[i + 1][0] if i + 1 < len(toks) else None) \
            and not (ROUND_ABOUT and re.search(r'\bround about$', g.rstrip(u' ,;:.\u2014').strip(), re.I)) \
+           and not (STRANDED_PREP and re.match(r'^H(C/)?(R|Rd)/Sp', morph_of(h)) and u'\u05be' not in h) \
+           and not (PHRASAL_ABOUT and re.search(r'\b(bring|bringing|brought|dig|digged|dug|go|going|went|wander|wandering|'
+                                               r'encircled?|encompass(ed)?|compassed)\s+(\w+\s+)?about$', g.rstrip(u' ,;:.\u2014').strip(), re.I)) \
            and not (PHRASAL_GLOSS and re.search(r'\b(me|him|her|it|us|them|you|thee|himself|herself|themselves|ourselves|yourselves|myself)\s+(in|on|up|out|down|away|off|forth|back|over)$',
                                                 g.rstrip(u' ,;:.\u2014').strip(), re.I)) \
            and not (KOL_ART and u'\u05be' not in h and bare(h) in (u'לכל', u'בכל', u'ככל', u'ולכל', u'ובכל', u'והכל')
@@ -1346,6 +1403,12 @@ def make_weakest(toks, prior, w, ent=None):
             # הַזֶּ֔ה Deuteronomy 4:32, WLC 27 times in 30, and the noun from its adjective
             # alone never; "and this great sin" had its pashta on וְהַחֵטְא, Alma 15:3)
             if u'־' not in h2 and is_dem(h2) and not (ADJ_DEM and noun_adj(i)): return True
+            # (...and bare אֵלֶּה after a noun with its suffix, the volume's "these my brethren",
+            # אַחַי אֵלֶּה, which the pashta divided, Alma 30:44, 29:16. Not after a preposition or
+            # אוֹתָם, where it opens the next clause: "and said unto me: These are" is אֵלַי אֵלֶּה,
+            # 1 Nephi 13:3; nor לְבַדִּי, Isaiah 49:21's "alone; these, where had they been?")
+            if DEM_BARE and u'־' not in h2 and bare(h2) == u'אלה' and re.search(r'(^H|/)Nc\w*/Sp', morph_of(h)) \
+               and not re.search(u'בד(י|ו|ה|ך|נו|ם)$', bare(h)): return True
         return False
     FINITE = re.compile(r'^HV.[pivj]')                        # a bare finite verb: no waw, no particle in front
     # a noun, a prepositional phrase, an adjective (not a cardinal: the table this
@@ -1378,6 +1441,14 @@ def make_weakest(toks, prior, w, ent=None):
         # כִּי־עוֹד, אִם־בִּדְבַר, לֹא־...)
         if u'\u05be' in h and re.match(r'^H(T[crni]|C)', morph_of(h, last=False)): return False
         if bare(h).split(u'\u05be')[-1] in PARTICLE_NOUN: return False
+        # (...nor an adjective before its copula, the predicate put first: "for the Spirit of
+        # God was strong" is כִּי חָזָק הָיָה רוּחַ אֱלֹהִים, and a pashta cut "strong" from "was",
+        # 1 Nephi 17:52; WLC divided 16 times in 33, תָּמִ֥ים הָיָ֖ה Genesis 6:9. Not an adjective
+        # on the noun before it, the end of a subject: "although there were many churches
+        # they were all one church" is גַּם־כִּי הָיוּ עֵדוֹת רַבּוֹת ‖ הָיוּ כֻלָּם, Mosiah 25:22)
+        if COPULA_ADJ and u'\u05be' not in h + h2 and re.match(r'^H(C/)?Aa', morph_of(h)) \
+           and not (i >= 1 and (attributive(toks[i - 1][0], h) or re.match(r'^H((C|R|Rd|X|Td)/)*Nc\w*$', morph_of(toks[i - 1][0])))) \
+           and bare(h2) in (u'היה', u'היתה', u'היו', u'יהיה', u'תהיה', u'יהיו', u'היית', u'הייתי', u'היינו', u'הייתם'): return False
         # (...nor תָּמִיד "always", the table's noun, before the verb it modifies: the WLC
         # divides after it 3 times in 13, and "which always was with the Nephites" had its
         # zaqef between them as subject and verb, Alma 19:27. After its own verb it ends
@@ -1605,13 +1676,21 @@ def make_weakest(toks, prior, w, ent=None):
             # "thousands" put a segolta between them (Alma 3:26); WLC a disjunctive
             # inside a compound number 155 times in 541, as seldom as after a construct
             if NUM_PAIR and u'\u05be' not in h and u'\u05be' not in h2 and is_num(h) \
-               and nfc(h2).startswith(u'\u05d5') and is_num(h2, True): s = min(s, NOMINAL)
+               and nfc(h2).startswith(u'\u05d5') and is_num(h2, True): s = min(s, NOMINAL - (4.0 if NUM_TIGHT else 0.0))
+            # (...and held below a construct, which takes the forced division instead: "in the
+            # commencement of the twenty and first year" is בִּתְחִלַּת שְׁנַת עֶשְׂרִים וְאַחַת, and the
+            # tevir fell inside the number, Alma 50:17; after "year of"/"son of" the WLC divides
+            # inside the number once in 19, after the construct twice, 1 Kings 16:10 בִּשְׁנַת֙ עֶשְׂרִ֣ים
+            # וָשֶׁ֔בַע; inside a compound number 30 times in 241. The volume had it 68 in 135)
             # ("if not" before the answer's own negation is the ellipsis itself)
-            if IMLO and is_imlo(i) and bare(h2).startswith(u'לא'): s = max(s, STRONG)
+            if IMLO and is_imlo(i) and (bare(h2).startswith(u'לא') or imlo_en(i)): s = max(s, STRONG)
             # "THE HIGH PRIEST" IS A TITLE: הַכֹּהֵן הַגָּדוֹל, divided once in 21 in the WLC
             # (Nehemiah 3:20); "and am the high priest" put the pashta between them, Alma 8:23.
             # Held just short of the joiner, which would write a maqqef the Masoretes never do
-            if HIGH_PRIEST and u'\u05be' not in h and bare(h).endswith(u'הכהן') and bare(h2) in (u'הגדול', u'הגדל'):
+            # (...and "the chief judge", הַשֹּׁפֵט הָרֹאשׁ, the volume's own title: "the chief judge sent
+            # a proclamation" put the tevir between them, Alma 27:21)
+            if HIGH_PRIEST and u'\u05be' not in h + h2 and ((bare(h).endswith(u'הכהן') and bare(h2) in (u'הגדול', u'הגדל'))
+                                                          or (CHIEF_JUDGE and chief_judge(h, h2))):
                 s = min(s, GIVE_UP + 1.0)
             # A SUFFIXED NOUN HOLDS ITS ADJECTIVE when the link before the noun is free: "I
             # thank my great God" is אוֹדֶה לֵאלֹהַי הַגָּדוֹל, and the pashta fell between God and
@@ -1652,6 +1731,15 @@ def make_weakest(toks, prior, w, ent=None):
             # wall: held hard, the joiner wrote זֹאת־לְבַד, a maqqef the Masoretes never do
             if LEVAD_AFTER and u'\u05be' not in h2 and bare(h2) == u'לבד' \
                and not re.match(r'(save|except|besides?|apart)\b', toks[i + 1][1].strip().lower()): s = min(s, NOMINAL - 2.0)
+            # A PARTICIPLE HOLDS ITS PRONOUN SUBJECT: "I say unto you" is אֹמֵר אֲנִי לְךָ, and the
+            # pashta fell between the participle and its "I" 125 times in this volume (אֹמֵר֙ אֲנִ֣י
+            # לְךָ֔, Alma 36:5) where the WLC divides after the pronoun 52 times in 63 and after the
+            # participle alone 9. Held under the link after the pronoun, never below a nominal one
+            # (not the article's participle, a noun: "the mother of harlots, she is the church" is
+            # אֵם הַזּוֹנוֹת הִיא הָעֵדָה, 1 Nephi 14:17)
+            if PTC_PRO and i + 2 < len(toks) and u'\u05be' not in h + h2 and re.match(r'^H(C/)?V.[rs]', morph_of(h)) \
+               and bare(h2) in PRON | PRON3 and not hard(i + 1):
+                s = min(s, max(score(i + 1) - 1.0, NOMINAL))
             # AFTER A BARE אַךְ the Tanakh divides 29% of the time (log-odds -0.9); the
             # model's "nevertheless" said 2.2 and put a zaqef gadol on אַ֕ךְ alone,
             # Alma 1:16
@@ -1718,9 +1806,15 @@ def make_weakest(toks, prior, w, ent=None):
         # none other salvation" is וְאֵין יְשׁוּעָה אַחֶרֶת before its zaqef, and the pashta
         # its one servant forced fell between יְשׁוּעָה and אַחֶרֶת (Mosiah 4:8); the
         # Masoretes write the particle with a maqqef, וְאֵין־
-        if JOIN_FIRST and best not in printed and (i_attr(best) or (best + 1 < len(toks) and construct(toks[best][0], toks[best + 1][0]))) \
+        # (...and a title, the chief judge as the high priest: "and also before the chief judge"
+        # is וְגַם לִפְנֵי הַשֹּׁפֵט הָרֹאשׁ, and the tevir fell inside the title, Alma 30:21)
+        title = lambda k: k + 1 < len(toks) and u'\u05be' not in toks[k][0] + toks[k + 1][0] and (
+            (bare(toks[k][0]).endswith(u'הכהן') and bare(toks[k + 1][0]) in (u'הגדול', u'הגדל'))
+            or (CHIEF_JUDGE and chief_judge(toks[k][0], toks[k + 1][0])))
+        if JOIN_FIRST and best not in printed and (i_attr(best) or title(best) or (best + 1 < len(toks) and construct(toks[best][0], toks[best + 1][0]))) \
            and best - 1 in cands and \
-           (nfc(toks[best - 1][0]) in NEVER_AFTER | PROCLITIC or bare(toks[best - 1][0]) in (u'אין', u'ואין', u'ולא')
+           ((nfc(toks[best - 1][0]) in NEVER_AFTER | PROCLITIC and not kol_holam(toks[best - 1][0], toks[best][0]))
+            or bare(toks[best - 1][0]) in (u'אין', u'ואין', u'ולא')
             or (nfc(toks[best - 1][0]) in WAW_PROC_BARE and u'\u05be' not in toks[best][0])):
             return None
         # (...and the negation before its verb and "again": "and they did no more attempt"
@@ -1729,7 +1823,9 @@ def make_weakest(toks, prior, w, ent=None):
         # the tifcha of a clause's end, וְלֹ֥א יִרְגַּ֖ז ע֑וֹד, 19 of 20)
         if LO_OD and glabel not in ('silluq', 'etnachta') and best not in printed and best - 1 in cands \
            and best + 1 < len(toks) and bare(toks[best + 1][0]) == u'עוד' and u'\u05be' not in toks[best][0] \
-           and bare(toks[best - 1][0]) in (u'לא', u'ולא'):
+           and bare(nfc(toks[best - 1][0]).split(u'\u05be')[-1]) in (u'לא', u'ולא'):
+            # (the negation behind a maqqef too: "that ye lead away the hearts of no more" is
+            # כִּי־לֹא תַתְעֶה עוֹד, and the pashta fell between the verb and עוֹד, Alma 39:13)
             return None
         # (dividing a merely unlikely link rather than joining was tried for
         # 1 Nephi 4:4 and gave אֶת־אֲשֶׁ֥ר צִוָּ֛ה יְהוָ֖ה and כִּ֥י אֵין֙ יְהוָ֔ה: a verb
@@ -1744,7 +1840,8 @@ def make_weakest(toks, prior, w, ent=None):
         done = lambda i: pre(i) or (JOIN_SKIP and getattr(units[i], 'joined', False))
         for i in range(hi - 1, lo - 1, -1):
             if done(i): continue
-            if i + 1 < len(toks) and (nfc(toks[i][0]) in NEVER_AFTER or bare(toks[i][0]) in (u'אין', u'ואין', u'ולא')): return i
+            if i + 1 < len(toks) and ((nfc(toks[i][0]) in NEVER_AFTER and not kol_holam(toks[i][0], toks[i + 1][0]))
+                                      or bare(toks[i][0]) in (u'אין', u'ואין', u'ולא')): return i
         # then a bare preposition (עַל, עַד, אֵין: אֲשֶׁר־אֵ֥ין כָּמוֹה֖וּ joins the
         # clause particle first, 1 Nephi 17:42)
         for i in range(hi - 1, lo - 1, -1):
@@ -1769,7 +1866,7 @@ def make_weakest(toks, prior, w, ent=None):
         if JOIN_SKIP and any(done(k) for k in range(lo, hi)): return None
         for i in range(hi - 1, lo - 1, -1):
             if pre(i): continue
-            if i + 1 < len(toks) and hard(i) and not re.search(u'(יהוה|אלהים)$', bare(toks[i][0])) \
+            if i + 1 < len(toks) and hard(i) and not re.search(u'(יהוה|אלהים)$', bare(toks[i][0])) and not kol_holam(toks[i][0], toks[i + 1][0]) \
                and not is_dem(toks[i + 1][0]) and not name_king(i) and not name_king(i + 1) \
                and not king_name(i):
                 # (...nor after a finite verb or a preposition with its suffix, which end
@@ -2220,6 +2317,17 @@ HIGH_PRIEST = True
 SFX_ADJ = True
 MIKOL_ABS = True
 LO_OD = True
+PHRASAL_ABOUT = True
+COPULA_ADJ = True
+STRANDED_PREP = True
+ADJ_DEM_PREP = True
+IMLO_EN = True
+CHIEF_JUDGE = True
+PTC_PRO = True
+NUM_TIGHT = True
+CHIEF_BARE = True
+PAIR_STOP = True
+DEM_BARE = True
 PAIR_OPENS = True
 EVER_NOUN = True
 ROUND_ABOUT = True
@@ -2267,9 +2375,11 @@ def main():
             # reaches forward (an infinitive absolute, a construct) is no division
             weakest, joiner, hard, strong, printed, score, appos, list_comma = make_weakest(speak, prior, w, ent)
             # ...and one inside a pair of names ("Laman | and Lemuel", 3:28) is the
-            # English comma landed a word or two off by the alignment
+            # English comma landed a word or two off by the alignment (a comma: a stop
+            # there is the end of a clause, "the captivity of my fathers; and that same
+            # God who delivered them" is אֲבוֹתַי וְהָאֱלֹהִים הַהוּא, Alma 29:12)
             marks = sorted(set((i, c) for i, c in printed_marks(key, toks, speak, ent, HAND)
-                     if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i)
+                     if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or (pair_link(speak, i) and not (PAIR_STOP and c >= 2))
                                                  or folded_mark(speak, i)))))
             printed.update(i for i, c in marks)
             # a noun before its verb with no printed mark there divides but does not

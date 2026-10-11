@@ -84,8 +84,11 @@ NEAR_FAR = {'silluq': ('tifcha', 'zaqef'), 'etnachta': ('tifcha', 'zaqef'),
             'pashta': ('rank4', 'rank4'), 'tevir': ('rank4', 'rank4'), 'zarqa': ('rank4', 'rank4'),
             'revia': ('rank4', 'rank4')}
 # a silluq or etnachta clause of two or more units is always divided
-# (WLC: a 2-unit clause is "tifcha etnachta" 100%, "tifcha silluq" 100%)
-MUST_DIVIDE = {'silluq', 'etnachta'}
+# (WLC: a 2-unit clause is "tifcha etnachta" 100%, "tifcha silluq" 100%), and
+# so is a segolta's: every one of the WLC's 946 prose segoltas has its zarqa,
+# two words or thirteen (וַיֹּאמֶר֮ נָתָן֒, 1 Kings 1:24); the volume had 239 without
+# one (וַיֹּ֣אמֶר יְהוָה֒, Alma 37:23)
+MUST_DIVIDE = {'silluq', 'etnachta', 'segolta'}
 # how many units a divider's own domain holds, at the 90-95% point of the WLC's
 # counts (tifcha 1-4: 94%; pashta 1-4: 97%; tevir 1-4: 96%; zaqef up to 7: 93%;
 # revia up to 5: 92%; segolta up to 8: 93%); beyond this the phrasing divides again
