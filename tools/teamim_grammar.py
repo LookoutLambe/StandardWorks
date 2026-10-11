@@ -477,6 +477,10 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
                 j = joiner(units, lo, e)
                 if j is not None and j not in joined and j <= e - 1:
                     joined.add(j)
+                    # (marked on the unit, so the joiner looks past it the next
+                    # time: וַיַּרְא גַם כִּי־מוֹפֵת joined כִּי and was handed כִּי again,
+                    # and the division the tail still needed fell on גַם, Alma 4:11)
+                    units[j].joined = True
                     continue
             if at is None or at < lo or at > e - 1: at = near
             while at in joined and at > lo: at -= 1
