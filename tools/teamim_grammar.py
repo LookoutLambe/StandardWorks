@@ -443,6 +443,23 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
     if n == 1:
         return [u.encode() for u in units], [u.label for u in units]
 
+    def inner_parts(u):
+        """the words of a unit before its last, each as a unit of its own, with
+           the letter index it starts at in the unit"""
+        if u' ' not in u.w: return []
+        out, off = [], 0
+        for p in u.w.split(u' ')[:-1]:
+            pu = Unit(p, stress_of(p) if stress_of else None)
+            out.append((pu, off)); off += len(pu.letters)
+        return out
+
+    def last_part(u):
+        """the unit's last word, the one its accent sits on, for the distances
+           its nearest servant is chosen by"""
+        if u' ' not in u.w: return u
+        p = u.w.split(u' ')[-1]
+        return Unit(p, stress_of(p) if stress_of else None)
+
     def dividers(s, e, clause=False):
         """the divisions inside [s, e): the strongest rank present (smallest number).
            A silluq or etnachta clause is divided by its rank-2 boundaries only:
@@ -571,8 +588,22 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
             assign(prev + 1, d, labels[idx], (b[d] if b[d] else grank + 1))
         last = divs[-1] if divs else s - 1
         tail = [units[i] for i in range(last + 1, e) if i not in joined]
-        for u, lab in zip(tail, servants(glabel, g, tail)):
-            if lab: place(u, lab)
+        # A UNIT OF TWO WORDS SERVES WITH BOTH: the interlinear glosses a few pairs
+        # as one unit (אֵת אֲשֶׁר "that which", כִּי גַם, יָמִים רַבִּים) and the
+        # grammar accents the unit on its last word; every word before it is one
+        # more servant in the chain, of this governor (its own words before its
+        # stress are its nearest servants) or of the unit's (אֵת stood bare and
+        # unaccented before אֲשֶׁר֙, Helaman 16:12)
+        slots, hosts = [], []
+        for u in tail + [g]:
+            for pu, off in inner_parts(u):
+                slots.append(pu); hosts.append((u, off))
+            if u is not g:
+                slots.append(u); hosts.append(None)
+        for u, host, lab in zip(slots, hosts, servants(glabel, last_part(g), slots)):
+            if not lab: continue
+            place(u, lab)
+            if host: host[0].marks.extend((li + host[1], c) for li, c in u.marks)
 
     # THE VERSE DIVIDES AT THE ETNACHTA, and each half is a clause of its own:
     # the one ending in the etnachta and the one ending in the silluq, each
