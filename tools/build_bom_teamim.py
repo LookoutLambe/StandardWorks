@@ -568,6 +568,10 @@ def prejoin(speak):
             last = h.split(u'\u05be')[-1]
             if KOL_PREFIX_CSTR and last and u'\u05c7' in last and bare(last) == u'כל' \
                and proclitic([(last, speak[i][1]), speak[i + 1]], 0): out.append(i)
+            # (...and a group that ends in a particle the Masoretes always join: "both
+            # of the Nephites" is גַּם־מִן הַנֶּפִיִּים, and the מִן took a mahpakh of its
+            # own, 3 Nephi 3:14)
+            elif GROUP_PROCLITIC and N(last) in ALWAYS_JOINED: out.append(i)
             continue
         if h in ALWAYS_JOINED or (h in JOINED_BEFORE_BARE and u'\u05be' not in h2): out.append(i)
         elif KOL_PREFIX_CSTR and u'\u05c7' in h and re.sub(u'^ו', '', bare(h)) in (u'בכל', u'לכל', u'ככל', u'מכל', u'כל') \
@@ -2287,6 +2291,7 @@ VEGAM_FLOOR = True
 TITLE_PREP = True
 TAMID_ADVERB = True
 KOL_PREFIX_CSTR = True
+GROUP_PROCLITIC = True
 ADJ_DEM_UNREAD = True
 WAW_GLOSSES = True
 PHRASAL_PREP = True
