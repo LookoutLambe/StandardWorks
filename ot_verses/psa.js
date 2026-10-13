@@ -2287,7 +2287,7 @@ var psa_ch107Verses = [
   { num:"לז", words:[["וַיִּזְרְעוּ","and sow"],["שָׂדוֹת","fields"],["וַיִּטְּעוּ","and plant"],["כְרָמִים","vineyards"],["וַיַּעֲשׂוּ","which yield"],["פְּרִי","a fruitful"],["תְבוּאָה","increase"],["׃",""]] },
   { num:"לח", words:[["וַיְבָרְכֵם","He blesses them also"],["וַיִּרְבּוּ","so that they are multiplied"],["מְאֹד","greatly"],["וּבְהֶמְתָּם","and their cattle"],["לֹא","not"],["יַמְעִיט","does He diminish"],["׃",""]] },
   { num:"לט", words:[["וַיִּמְעֲטוּ","again they are diminished"],["וַיָּשֹׁחוּ","and brought low"],["מֵעֹצֶר","through oppression"],["רָעָה","affliction"],["וְיָגוֹן","and sorrow"],["׃",""]] },
-  { num:"מ", words:[["שֹׁפֵךְ","He pours"],["בּוּז","contempt"],["עַל־נְדִיבִים","upon princes"],["וַיַּתְעֵם","and causes them to wander"],["בְּתֹהוּ","in the waste"],["לֹא־דָרֶךְ","where there is no way"],["׃",""]] },
+  { num:"מ", words:[["שֹׁפֵךְ","He pours"],["בּוּז","contempt"],["עַל־נְדִיבִים","upon princes"],["וַיַּתְעֵם","and causes them to wander"],["בְּתֹהוּ","in chaos"],["לֹא־דָרֶךְ","where there is no way"],["׃",""]] },
   { num:"מא", words:[["וַיְשַׂגֵּב","yet He sets on high"],["אֶבְיוֹן","the needy"],["מֵעוֹנִי","from affliction"],["וַיָּשֶׂם","and makes him"],["כַּצֹּאן","like a flock"],["מִשְׁפָּחוֹת","families"],["׃",""]] },
   { num:"מב", words:[["יִרְאוּ","shall see it"],["יְשָׁרִים","the upright"],["וְיִשְׂמָחוּ","and rejoice"],["וְכׇל־עַוְלָה","and all iniquity"],["קָפְצָה","shall stop"],["פִּיהָ","her mouth"],["׃",""]] },
   { num:"מג", words:[["מִי־חָכָם","whoever is wise"],["וְיִשְׁמׇר־אֵלֶּה","and will observe these things"],["וְיִתְבּוֹנְנוּ","they shall understand"],["חַסְדֵי","the mercies of"],["יְהֹוָה","the LORD"],["׃",""]] },

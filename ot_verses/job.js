@@ -147,7 +147,7 @@ var job_ch6Verses = [
   { num:"טו", words:[["אַחַי","my brothers"],["בָּגְדוּ","they have acted treacherously"],["כְמוֹ־נָחַל","like a river"],["כַּאֲפִיק","like a stream bed of"],["נְחָלִים","streams"],["יַעֲבֹרוּ","they passed over"],["׃",""]] },
   { num:"טז", words:[["הַקֹּדְרִים","which are blackish"],["מִנִּי־קָרַח","by reason of the ice"],["עָלֵימוֹ","on them"],["יִתְעַלֶּם־שָׁלֶג","it hides itself snow"],["׃",""]] },
   { num:"יז", words:[["בְּעֵת","in time"],["יְזֹרְבוּ","when they wax warm"],["נִצְמָתוּ","they vanish"],["בְּחֻמּוֹ","in its heat"],["נִדְעֲכוּ","they are dried up"],["מִמְּקוֹמָם","from their place"],["׃",""]] },
-  { num:"יח", words:[["יִלָּפְתוּ","are turned aside"],["אׇרְחוֹת","the paths of"],["דַּרְכָּם","their way"],["יַעֲלוּ","they go up"],["בַתֹּהוּ","to nothing"],["וְיֹאבֵדוּ","and they shall perish"],["׃",""]] },
+  { num:"יח", words:[["יִלָּפְתוּ","are turned aside"],["אׇרְחוֹת","the paths of"],["דַּרְכָּם","their way"],["יַעֲלוּ","they go up"],["בַתֹּהוּ","into chaos"],["וְיֹאבֵדוּ","and they shall perish"],["׃",""]] },
   { num:"יט", words:[["הִבִּיטוּ","they regarded"],["אׇרְחוֹת","the troops of"],["תֵּמָא","Tema"],["הֲלִיכֹת","the companies of"],["שְׁבָא","Sheba"],["קִוּוּ־לָמוֹ","waited for them"],["׃",""]] },
   { num:"כ", words:[["בֹּשׁוּ","they are disappointed"],["כִי־בָטָח","because they had hoped"],["בָּאוּ","came"],["עָדֶיהָ","to it"],["וַיֶּחְפָּרוּ","and they were disappointed"],["׃",""]] },
   { num:"כא", words:[["כִּי־עַתָּה","because now"],["הֱיִיתֶם","you are"],["לֹא","nothing"],["תִּרְאוּ","you shall witness"],["חֲתַת","my casting down"],["וַתִּירָאוּ","and you were afraid"],["׃",""]] },
@@ -327,7 +327,7 @@ var job_ch12Verses = [
   { num:"כא", words:[["שׁוֹפֵךְ","shedding"],["בּוּז","contempt"],["עַל־נְדִיבִים","upon the nobles"],["וּמְזִיחַ","and the strength of"],["אֲפִיקִים","of the mighty"],["רִפָּה","weakens"],["׃",""]] },
   { num:"כב", words:[["מְגַלֶּה","he discovers"],["עֲמֻקוֹת","deep things"],["מִנִּי־חֹשֶׁךְ","out of darkness"],["וַיֹּצֵא","and brings out"],["לָאוֹר","to light"],["צַלְמָוֶת","the shadow of death"],["׃",""]] },
   { num:"כג", words:[["מַשְׂגִּיא","he increases"],["לַגּוֹיִם","to the nations"],["וַיְאַבְּדֵם","and he destroyed them"],["שֹׁטֵחַ","he enlarges"],["לַגּוֹיִם","to the nations"],["וַיַּנְחֵם","and straitens them again"],["׃",""]] },
-  { num:"כד", words:[["מֵסִיר","takes away"],["לֵב","heart"],["רָאשֵׁי","of the chief of"],["עַם־הָאָרֶץ","the people of the earth"],["וַיַּתְעֵם","and causes them to wander"],["בְּתֹהוּ","in a wilderness"],["לֹא־דָרֶךְ","not a path"],["׃",""]] },
+  { num:"כד", words:[["מֵסִיר","takes away"],["לֵב","heart"],["רָאשֵׁי","of the chief of"],["עַם־הָאָרֶץ","the people of the earth"],["וַיַּתְעֵם","and causes them to wander"],["בְּתֹהוּ","in chaos"],["לֹא־דָרֶךְ","not a path"],["׃",""]] },
   { num:"כה", words:[["יְמַשְׁשׁוּ־חֹשֶׁךְ","they grope in the dark"],["וְלֹא־אוֹר","and not light"],["וַיַּתְעֵם","and he makes them to stagger"],["כַּשִּׁכּוֹר","like the drunkard"],["׃",""]] },
 ];
 renderVerseSet(job_ch12Verses, 'job-ch12-verses');
@@ -705,7 +705,7 @@ var job_ch26Verses = [
   { num:"ד", words:[["אֶת־מִי","whom"],["הִגַּדְתָּ","have you uttered"],["מִלִּין","words"],["וְנִשְׁמַת־מִי","and whose spirit"],["יָצְאָה","went forth"],["מִמֶּךָּ","from you"],["׃",""]] },
   { num:"ה", words:[["הָרְפָאִים","the dead"],["יְחוֹלָלוּ","are formed"],["מִתַּחַת","from beneath"],["מַיִם","water"],["וְשֹׁכְנֵיהֶם","and the inhabitants thereof"],["׃",""]] },
   { num:"ו", words:[["עָרוֹם","is naked"],["שְׁאוֹל","Sheol"],["נֶגְדּוֹ","before him"],["וְאֵין","and there is no"],["כְּסוּת","a covering of"],["לָאֲבַדּוֹן","to destruction"],["׃",""]] },
-  { num:"ז", words:[["נֹטֶה","he stretches out"],["צָפוֹן","the north"],["עַל־תֹּהוּ","over the empty place"],["תֹּלֶה","he hangs"],["אֶרֶץ","the land of"],["עַל־בְּלִי־מָה","upon nothing"],["׃",""]] },
+  { num:"ז", words:[["נֹטֶה","he stretches out"],["צָפוֹן","the north"],["עַל־תֹּהוּ","over chaos"],["תֹּלֶה","he hangs"],["אֶרֶץ","the land of"],["עַל־בְּלִי־מָה","upon nothing"],["׃",""]] },
   { num:"ח", words:[["צֹרֵר־מַיִם","he binds up the waters"],["בְּעָבָיו","in his thick clouds"],["וְלֹא־נִבְקַע","and not it is split open"],["עָנָן","a cloud"],["תַּחְתָּם","under them"],["׃",""]] },
   { num:"ט", words:[["מְאַחֵז","he holds back"],["פְּנֵי־כִסֵּה","the face of his throne"],["פַּרְשֵׁז","and spreads"],["עָלָיו","upon him"],["עֲנָנוֹ","his cloud"],["׃",""]] },
   { num:"י", words:[["חֹק־חָג","he has compassed with bounds"],["עַל־פְּנֵי־מָיִם","upon the face of water"],["עַד־תַּכְלִית","until come to an end"],["אוֹר","the day"],["עִם־חֹשֶׁךְ","and night"],["׃",""]] },
