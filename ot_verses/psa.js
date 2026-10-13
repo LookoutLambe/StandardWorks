@@ -1171,7 +1171,7 @@ var psa_ch61Verses = [
   { num:"ו", words:[["כִּי־אַתָּה","for You"],["אֱלֹהִים","O God"],["שָׁמַעְתָּ","You have heard"],["לִנְדָרָי","my vows"],["נָתַתָּ","You have granted"],["יְרֻשַּׁת","the heritage of"],["יִרְאֵי","those who fear"],["שְׁמֶךָ","Your name"],["׃",""]] },
   { num:"ז", words:[["יָמִים","days"],["עַל־יְמֵי־מֶלֶךְ","to the days of the king"],["תּוֹסִיף","You will add"],["שְׁנוֹתָיו","his years"],["כְּמוֹ־דֹר","as many generations"],["וָדֹר","to generation"],["׃",""]] },
   { num:"ח", words:[["יֵשֵׁב","may he be enthroned"],["עוֹלָם","forever"],["לִפְנֵי","before"],["אֱלֹהִים","God"],["חֶסֶד","mercy"],["וֶאֱמֶת","and truth"],["מַן","O appoint"],["יִנְצְרֻהוּ","that they may preserve him"],["׃",""]] },
-  { num:"ט", words:[["כֵּן","so"],["אֲזַמְּרָה","will I sing praise to"],["שִׁמְךָ","Your name"],["לָעַד","forever"],["לְשַׁלְּמִי","as I perform"],["נְדָרַי","my vows"],["יוֹם","day"],["יוֹם","day"],["׃",""]] },
+  { num:"ט", words:[["כֵּן","so"],["אֲזַמְּרָה","will I sing praise to"],["שִׁמְךָ","Your name"],["לָעַד","forever"],["לְשַׁלְּמִי","as I perform"],["נְדָרַי","my vows"],["יוֹם","daily"],["יוֹם","daily"],["׃",""]] },
 ];
 renderVerseSet(psa_ch61Verses, 'psa-ch61-verses');
 
@@ -1297,7 +1297,7 @@ var psa_ch68Verses = [
   { num:"יז", words:[["לָמָּה","why"],["תְּרַצְּדוּן","do you look with envy"],["הָרִים","O mountains of"],["גַּבְנֻנִּים","peaks"],["הָהָר","the mountain which"],["חָמַד","desired"],["אֱלֹהִים","God"],["לְשִׁבְתּוֹ","for His dwelling"],["אַף־יְהֹוָה","yea the LORD"],["יִשְׁכֹּן","will dwell there"],["לָנֶצַח","forever"],["׃",""]] },
   { num:"יח", words:[["רֶכֶב","the chariots of"],["אֱלֹהִים","God"],["רִבֹּתַיִם","are twenty thousand"],["אַלְפֵי","thousands upon"],["שִׁנְאָן","thousands"],["אֲדֹנָי","the Lord is"],["בָֿם","among them"],["סִינַי","Sinai"],["בַּקֹּדֶשׁ","in the sanctuary"],["׃",""]] },
   { num:"יט", words:[["עָלִיתָ","You have ascended"],["לַמָּרוֹם","on high"],["שָׁבִיתָ","You have led captive"],["שֶּׁבִי","captivity"],["לָקַחְתָּ","You have received"],["מַתָּנוֹת","gifts"],["בָּאָדָם","among men"],["וְאַף","yea even"],["סוֹרְרִים","the rebellious"],["לִשְׁכֹּן","that may dwell there"],["יָהּ","the LORD"],["אֱלֹהִים","God"],["׃",""]] },
-  { num:"כ", words:[["בָּרוּךְ","blessed be"],["אֲדֹנָי","the Lord"],["יוֹם","day"],["יוֹם","day"],["יַעֲמׇס־לָנוּ","who bears our burden"],["הָאֵל","the God"],["יְשׁוּעָתֵנוּ","our salvation"],["סֶלָה","Selah"],["׃",""]] },
+  { num:"כ", words:[["בָּרוּךְ","blessed be"],["אֲדֹנָי","the Lord"],["יוֹם","daily"],["יוֹם","daily"],["יַעֲמׇס־לָנוּ","who bears our burden"],["הָאֵל","the God"],["יְשׁוּעָתֵנוּ","our salvation"],["סֶלָה","Selah"],["׃",""]] },
   { num:"כא", words:[["הָאֵל","God is"],["לָנוּ","to us"],["אֵל","a God"],["לְמוֹשָׁעוֹת","of deliverances"],["וְלֵיהֹוִה","and to GOD"],["אֲדֹנָי","the Lord"],["לַמָּוֶת","from death"],["תֹּצָאוֹת","belong the issues"],["׃",""]] },
   { num:"כב", words:[["אַךְ־אֱלֹהִים","but God"],["יִמְחַץ","shall wound"],["רֹאשׁ","the head of"],["אֹיְבָיו","His enemies"],["קׇדְקֹד","the scalp of"],["שֵׂעָר","hair"],["מִתְהַלֵּךְ","him who goes on"],["בַּאֲשָׁמָיו","in his guilt"],["׃",""]] },
   { num:"כג", words:[["אָמַר","said"],["אֲדֹנָי","the Lord"],["מִבָּשָׁן","from Bashan"],["אָשִׁיב","I will bring back"],["אָשִׁיב","I will bring back"],["מִמְּצֻלוֹת","from the depths of"],["יָם","the sea"],["׃",""]] },
