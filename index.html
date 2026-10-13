@@ -1504,6 +1504,7 @@ body, button, input, select, textarea,
         <a href="hebrew/index.html">Every chapter as a plain page</a><br>
         <a href="he.html" lang="he" dir="rtl">כתבי הקודש בעברית</a><br>
         <a href="in-print.html">Sefer Mormon in print</a><br>
+        <span class="sw-donate" hidden><a href="https://donate.stripe.com/bJe3cvchIa7RcWJfAy7bW00" rel="noopener">Support this work with a donation</a><br></span>
         <button type="button" class="votd-toggle" id="votd-toggle">Hide the daily verse</button>
       </p>
       <div class="hub-footer-colophon">
@@ -1582,6 +1583,10 @@ body, button, input, select, textarea,
       <p class="hub-footer-copy">The Book of Mormon in Hebrew has a site of its own: <a href="https://hebrewbookofmormon.net/">hebrewbookofmormon.net</a></p>
       <p class="hub-footer-copy">&copy; 2026 Chris Lambe. All rights reserved. Licensing inquiries: <a href="mailto:chris@sefermormon.com">chris@sefermormon.com</a> &middot; <a href="privacy.html">Privacy</a></p>
     </footer>
+    <!-- Donations are web only: the link stays hidden unless the page is served from the
+         website itself. Both apps load their own bundled copy (file: on iPhone,
+         appassets.androidplatform.net on Android), so the stores never see a payment link. -->
+    <script>(function(){var h=(location.hostname||'').toLowerCase();if(!/(^|\.)sefermormon\.com$|^localhost$|^127\.0\.0\.1$/.test(h))return;var d=document.querySelectorAll('.sw-donate');for(var i=0;i<d.length;i++)d[i].hidden=false;})();</script>
 
   </div><!-- /panel-landing -->
 
