@@ -746,7 +746,7 @@ var _2sa_ch23Verses = [
   { num:"כד", words:[["עֲשָׂהאֵל","Asahel"],["אֲחִי־יוֹאָב","the brother of Joab"],["בַּשְּׁלֹשִׁים","was among the thirty"],["אֶלְחָנָן","Elhanan"],["בֶּן־דֹּדוֹ","the son of Dodo"],["בֵּית","of Beth-"],["לָחֶם","lehem"],["׃",""]] },
   { num:"כה", words:[["שַׁמָּה","Shammah"],["הַחֲרֹדִי","the Harodite"],["אֱלִיקָא","Elika"],["הַחֲרֹדִי","the Harodite"],["׃",""]] },
   { num:"כו", words:[["חֶלֶץ","Helez"],["הַפַּלְטִי","the Paltite"],["עִירָא","Ira"],["בֶן־עִקֵּשׁ","the son of Ikkesh"],["הַתְּקוֹעִי","the Tekoite"],["׃",""]] },
-  { num:"כז", words:[["אֲבִיעֶזֶר","Abiezer"],["הָעַנְּתֹתִי","the Anethothite"],["מְבֻנַּי","Mebunnai"],["הַחֻשָׁתִי","the Hushathite"],["׃",""]] },
+  { num:"כז", words:[["אֲבִיעֶזֶר","Abiezer"],["הָעַנְּתֹתִי","the Anathothite"],["מְבֻנַּי","Mebunnai"],["הַחֻשָׁתִי","the Hushathite"],["׃",""]] },
   { num:"כח", words:[["צַלְמוֹן","Zalmon"],["הָאֲחֹחִי","the Ahohite"],["מַהְרַי","Maharai"],["הַנְּטֹפָתִי","the Netophathite"],["׃",""]] },
   { num:"כט", words:[["חֵלֶב","Heleb"],["בֶּן־בַּעֲנָה","the son of Baanah"],["הַנְּטֹפָתִי","the Netophathite"],["אִתַּי","Ittai"],["בֶּן־רִיבַי","the son of Ribai"],["מִגִּבְעַת","from Gibeah of"],["בְּנֵי","the children of"],["בִנְיָמִן","Benjamin"],["׃",""]] },
   { num:"ל", words:[["בְּנָיָהוּ","Benaiah"],["פִּרְעָתֹנִי","a Pirathonite"],["הִדַּי","Hiddai"],["מִנַּחֲלֵי","from the brooks of"],["גָעַשׁ","Gaash"],["׃",""]] },
