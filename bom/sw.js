@@ -4,7 +4,7 @@
     the hook did not touch it (it pointed at scripts/write_build_version.js,
     which does not exist), so the list below had been frozen for days and
     every Book of Mormon asset change was served stale. Never hand-edit. */
-const CACHE = 'bom-2026-10-17T00-49-43';
+const CACHE = 'bom-2026-10-17T12-54-34';
 /** Shell only — verse *.js files are cached at runtime, refreshed in the background (see fetch handler). */
 const ASSETS = [
   './bom.html',
@@ -35,10 +35,12 @@ const ASSETS = [
      tools/build_crossref_chunks.js, and arrive with the book like the verses. */
   './topical_guide.js?v=4',
   './images/cover-dual.jpg?v=3',
+  './images/cover-footnote-paperback.jpg?v=1',
   './images/cover-hebrew.jpg?v=8',
   './images/cover-interlinear.jpg?v=7',
   './images/cover-kindle.jpg?v=1',
-  './images/cover-triple.jpg?v=6'
+  './images/cover-triple.jpg?v=6',
+  './images/cover-triple-hardcover.jpg?v=1'
 ];
 
 function isVerseScript(pathname) {

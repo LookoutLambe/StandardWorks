@@ -16,6 +16,11 @@
       format: 'Soft Cover', spec: 'Softcover · 6 × 9 in', seller: 'Amazon', href: 'https://www.amazon.com/dp/B0DVTJC9HJ',
       w: 600, h: 900, img: 'cover-hebrew.jpg?v=8', alt: 'Hebrew Book of Mormon',
       blurb: 'The Hebrew text alone, pointed, verse by verse, in a reader’s volume. Nothing on the page but the Book of Mormon in the Hebrew of the prophets.' },
+    { key: 'footnote-paperback', title: 'Footnote Edition', name: 'Sefer Mormon: Footnote Edition, softcover',
+      format: 'Soft Cover', spec: 'Softcover · 6 × 9 in', seller: 'IngramSpark',
+      href: 'https://shop.ingramspark.com/b/084?params=YplREuMxKZT5JZcsOpgZPIyDu1MxmofEWaYJZcROfJw',
+      w: 600, h: 900, img: 'cover-footnote-paperback.jpg?v=1', alt: 'Hebrew Book of Mormon, footnote edition: softcover',
+      blurb: 'The Hebrew text with the translator’s footnotes, verse by verse, in a 6 × 9 softcover of 460 pages.' },
     { key: 'dual', title: 'Dual Language Edition', name: 'Sefer Mormon: Dual Language Edition, Hebrew and English',
       format: 'Soft Cover', spec: 'Softcover · 7 × 10 in', seller: 'Amazon', href: 'https://www.amazon.com/dp/B0GGQZG9K9',
       w: 629, h: 900, img: 'cover-dual.jpg?v=3', alt: 'Dual Language Book of Mormon',
@@ -23,7 +28,12 @@
     { key: 'triple', title: 'Triple Combination', name: 'Sefer Mormon: Triple Combination in Hebrew',
       format: 'Soft Cover', spec: 'Softcover', seller: 'Amazon', href: 'https://www.amazon.com/dp/B0H11CV516',
       w: 600, h: 900, img: 'cover-triple.jpg?v=6', alt: 'Triple Combination',
-      blurb: 'The Book of Mormon, the Doctrine and Covenants and the Pearl of Great Price in Hebrew, bound as one volume.' }
+      blurb: 'The Book of Mormon, the Doctrine and Covenants and the Pearl of Great Price in Hebrew, bound as one volume.' },
+    { key: 'triple-hardcover', title: 'Triple Combination', name: 'Sefer Mormon: Triple Combination in Hebrew, gloss hardcover',
+      format: 'Hardcover · Gloss', spec: 'Hardcover · Gloss · 6 × 9 in', seller: 'IngramSpark',
+      href: 'https://shop.ingramspark.com/b/084?params=eS4YoI2Ls5JPuAnFtGbp3RVYE0X51PvdKh5BpL5BJjc',
+      w: 566, h: 900, img: 'cover-triple-hardcover.jpg?v=1', alt: 'Triple Combination in Hebrew, gloss hardcover',
+      blurb: 'The same three books in Hebrew, 778 pages, in a hardcover with a gloss finish.' }
   ];
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
   /* cards(imgBase, {detail}) -> the .ed-grid markup. imgBase is the path to
